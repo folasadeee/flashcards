@@ -7,5 +7,32 @@
 
 .card {
   border: 1px solid black;
-  margin: 10px;
+  width: 500px;
+  height: 250px;
+  background-color: gold;
+  display: flex;
+}
+
+.card p {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+.flashcard {
+  background-color: salmon;
+  margin: auto;
+  padding: 20px 50px;
+}
+
+.divider {
+  height: 5px;
+  width: auto;
+}
+
+.card-img {
+  width: 200px;
+  height: fit-content;
+  margin: auto;
 }
