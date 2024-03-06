@@ -58,7 +58,8 @@ function App() {
         </div>
         <p className="text-2xl mb-6 text-gray-800 p-11">Think you're S-M-R-T? Test your knowledge of <i>The Simpsons</i> with these trivia questions!<br />
         <br/>
-        Click the <b>flashcard</b> below to reveal the answer, and click the <b className="bg-slate-200 rounded-full px-5">Next</b> and <b className="bg-slate-200 rounded-full px-5">Last</b> buttons to navigate the card deck.</p>
+        Click the <b>flashcard</b> below to reveal the answer, and click the <b className="bg-slate-200 rounded-full px-5">Next</b> and <b className="bg-slate-200 rounded-full px-5">Last</b> buttons to navigate the card deck.<br/>
+        <br/>There are <b>{shuffledData.length}</b> cards in this deck. You are on card {currentIndex + 1}/{shuffledData.length}.</p>
 
         
 
