@@ -43,12 +43,24 @@ function App() {
 
   return (
     <>
-      <div className='info'>
-        <h1>Title</h1>
-        <p>Description</p>
-        <p><b>Number of Cards</b>: {shuffledData.length}</p>
-        <p><b>Current Card:</b> {currentIndex + 1}/{shuffledData.length}</p>
-      </div>
+      <div className='flex justify-center items-center min-h-screen backdrop-blur-sm'>
+      <div className='
+      flex flex-col justify-center items-center
+      bg-white max-w-4xl min-w-96 p-8 text-center rounded-xl 
+      drop-shadow-md
+
+      mx-auto backdrop-blur-sm'>
+        <div className='header-container flex flex-row justify-center items-center w-full'>
+          <h1 className='text-6xl font-extrabold leading-none tracking-tight 
+          text-left
+          mx-8 max-w-xl break-normal'>Simpsons Trivia? <span className="underline decoration-pink-400 underline-offset-8 decoration-8">Woo-hoo!</span></h1>
+          <img src='src/assets/donut-svgrepo-com.svg' className="object-contain h-48" />
+        </div>
+        <p className="text-2xl mb-6 text-gray-800 p-11">Think you're S-M-R-T? Test your knowledge of <i>The Simpsons</i> with these trivia questions!<br />
+        <br/>
+        Click the <b>flashcard</b> below to reveal the answer, and click the <b className="bg-slate-200 rounded-full px-5">Next</b> and <b className="bg-slate-200 rounded-full px-5">Last</b> buttons to navigate the card deck.</p>
+
+        
 
       {shuffledData.length > 0 && (
         <Flashcard
@@ -60,14 +72,18 @@ function App() {
         />
       )}
 
-      <div className='divider'></div>
 
-      <div className='controlButtons'>
-      <button className='lastButton' onClick={handleLast}>Last</button>
-        <button className='nextButton' onClick={handleNext}>
+      <div className="flex flex-row justify-items-center gap-x-5 justify-center py-6">
+      <button className='text-lg mx
+                px-6 py-2 rounded-full bg-slate-200
+                hover:bg-slate-300
+                bg-clip-padding' onClick={handleLast}>Last</button>
+        <button className="text-lg
+                px-6 py-2 rounded-full bg-blue-800 hover:bg-blue-600 text-white         
+                bg-clip-padding" onClick={handleNext}>
           Next
         </button>
-      </div>
+      </div></div></div>
     </>
   );
 }

@@ -7,12 +7,15 @@ const Flashcard = ({question, answer, answerShown, setAnswerShown, image}) => {
     
        
     return (
-        <div className='flashcard'>
-
-            <div className='card' onClick={flipCard}>
-                <img className='card-img' src={image} /><p>{answerShown ? answer : question}</p>
-            </div>
-
+        <div onClick={flipCard}
+        className="text-2xl 
+                bg-amber-100 max-w-4xl min-w-96 p-8 text-center 
+                drop-shadow-md
+                hover:drop-shadow-xl
+                transition-all duration-300 ease-in-out
+                ">
+                <p>{answerShown ? answer : question}</p>
+           
 
         </div>
     )
