@@ -25,6 +25,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 * Used Tailwind CSS to build app's UI
+* Added "Shuffle" and "Back to Start" buttons
 
 ## Video Walkthrough
 
