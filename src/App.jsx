@@ -4,11 +4,36 @@ import Flashcard from './components/Flashcard';
 
 function App() {
   const flashcardData = [ // List of question/answer pairs to display
-    { question: 'Who was the first character to speak in the first Star Wars film, A New Hope?', answer: 'C3PO', image: '' },
-    { question: 'Question2', answer: 'Answer2' },
-    { question: 'Question3', answer: 'Answer3' },
-    { question: 'Question4', answer: 'Answer4' },
-    { question: 'Question5', answer: 'Answer5' }
+    { question: 'What kind of beer is usually served at Moe\'s Tavern?', 
+      answer: 'Duff Beer'},
+
+    { question: 'What beverage did Homer create?', 
+      answer: 'Flaming Homer' },
+
+    { question: 'What does the J stand for in "Homer J. Simpson?"', 
+      answer: 'Jay' },
+
+    { question: 'What is the first name of Bart\'s best friend? ', 
+      answer: 'Milhouse' },
+
+    { question: 'What is the last name of the Simpsons\' friendly neighbor?', 
+      answer: 'Ned Flanders' },
+
+    { question: 'In "Team Homer," what was the name of Homer\'s bowling team?', 
+      answer: 'Pin Pals' },
+
+    { question: 'What musical instrument does Lisa Simpson play?', 
+      answer: 'Saxophone' },
+
+    { question: 'What is Marge Simpson\'s maiden name?', 
+      answer: 'Bouvier' },
+
+    { question: 'What breed is the Simpsons\' dog, Santa\'s Little Helper?', 
+      answer: 'greyhound' },
+
+    { question: 'What household appliance inspired Homer\'s pseudonym, "Max Power"?', 
+      answer: 'hairdryer' },
+
   ];
 
   const [shuffledData, setShuffledData] = useState([]); // Array to randomize order of cards

@@ -4,7 +4,7 @@ Submitted by: **Folasade Goddard**
 
 This web app is a flashcard-based trivia app. Users are presented with questions and answers about *The Simpsons*, a popular TV show.
 
-Time spent: **10** hours spent in total
+Time spent: **12** hours spent in total
 
 ## Required Features
 
@@ -31,10 +31,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/Aqs0CV1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with LICEcap
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -42,7 +42,7 @@ GIF created with ...
 
 ## Notes
 
-- 
+- The most challenging aspect of this project was randomizing the card order on each refresh. Although I was ultimately able to implement this feature with the help of ChatGPT, I still need to delve deeper into understanding the algorithm and continue practicing to truly grasp the concept of React state management.
 
 ## License
 
