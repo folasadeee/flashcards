@@ -7,6 +7,7 @@ const Flashcard = ({question, answer, answerShown, setAnswerShown, image}) => {
     
        
     return (
+        <>
         <div onClick={flipCard}
         className="text-2xl 
                 bg-amber-100 max-w-4xl min-w-96 p-8 text-center 
@@ -16,8 +17,10 @@ const Flashcard = ({question, answer, answerShown, setAnswerShown, image}) => {
                 ">
                 <p>{answerShown ? answer : question}</p>
            
-
         </div>
+
+        </>
+        
     )
 }
 

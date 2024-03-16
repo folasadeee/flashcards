@@ -4,37 +4,71 @@ import Flashcard from './components/Flashcard';
 
 function App() {
   const flashcardData = [ // List of question/answer pairs to display
-    { question: 'What kind of beer is usually served at Moe\'s Tavern?', 
-      answer: 'Duff Beer'},
+    {
+      question: 'What kind of beer is usually served at Moe\'s Tavern?',
+      answer: 'Duff Beer'
+    },
 
-    { question: 'What beverage did Homer create?', 
-      answer: 'Flaming Homer' },
+    {
+      question: 'What beverage did Homer create?',
+      answer: 'Flaming Homer'
+    },
 
-    { question: 'What does the J stand for in "Homer J. Simpson?"', 
-      answer: 'Jay' },
+    {
+      question: 'What does the J stand for in "Homer J. Simpson?"',
+      answer: 'Jay'
+    },
 
-    { question: 'What is the first name of Bart\'s best friend? ', 
-      answer: 'Milhouse' },
+    {
+      question: 'What is the first name of Bart\'s best friend? ',
+      answer: 'Milhouse'
+    },
 
-    { question: 'What is the last name of the Simpsons\' friendly neighbor?', 
-      answer: 'Ned Flanders' },
+    {
+      question: 'What is the last name of the Simpsons\' friendly neighbor?',
+      answer: 'Ned Flanders'
+    },
 
-    { question: 'In "Team Homer," what was the name of Homer\'s bowling team?', 
-      answer: 'Pin Pals' },
+    {
+      question: 'In "Team Homer," what was the name of Homer\'s bowling team?',
+      answer: 'Pin Pals'
+    },
 
-    { question: 'What musical instrument does Lisa Simpson play?', 
-      answer: 'Saxophone' },
+    {
+      question: 'What musical instrument does Lisa Simpson play?',
+      answer: 'Saxophone'
+    },
 
-    { question: 'What is Marge Simpson\'s maiden name?', 
-      answer: 'Bouvier' },
+    {
+      question: 'What is Marge Simpson\'s maiden name?',
+      answer: 'Bouvier'
+    },
 
-    { question: 'What breed is the Simpsons\' dog, Santa\'s Little Helper?', 
-      answer: 'greyhound' },
+    {
+      question: 'What breed is the Simpsons\' dog, Santa\'s Little Helper?',
+      answer: 'greyhound'
+    },
 
-    { question: 'What household appliance inspired Homer\'s pseudonym, "Max Power"?', 
-      answer: 'hairdryer' },
+    {
+      question: 'What household appliance inspired Homer\'s pseudonym, "Max Power"?',
+      answer: 'hairdryer'
+    },
 
   ];
+
+  const [userAnswer, setUserAnswer] = useState('');
+  const [validAnswer, setValidAnswer] = useState();
+
+  function onCheckAnswer(event) {
+    event.preventDefault();
+    const correctAnswer = shuffledData[currentIndex].answer.toLowerCase();
+    setValidAnswer(userAnswer.toLowerCase() === correctAnswer);
+  }
+
+const defaultStyle = 'bg-slate-50 border-dashed border-2 border-sky-500 px-2 mx-3'
+const incorrectStyle = 'bg-slate-50 border-dashed border-2 border-red-500 px-2 mx-3'
+const correctStyle = 'bg-slate-50 border-dashed border-2 border-green-500 px-2 mx-3'
+
 
   const [shuffledData, setShuffledData] = useState([]); // Array to randomize order of cards
   const [currentIndex, setCurrentIndex] = useState(0); // Array to store current index
@@ -56,6 +90,8 @@ function App() {
     if (currentIndex < shuffledData.length - 1) {
       setCurrentIndex(currentIndex + 1);
       setAnswerShown(false); // Display question first
+      setValidAnswer(null)
+      setUserAnswer('')
     }
   }
 
@@ -63,6 +99,8 @@ function App() {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
       setAnswerShown(false); // Display question first
+      setValidAnswer(null)
+      setUserAnswer('')
     }
   }
 
@@ -108,6 +146,31 @@ function App() {
             />
           )}
 
+<form className='py-5'>
+        <label className='font-bold'>
+          Enter an Answer:
+          <input
+            type="text"
+            name="name"
+            placeholder="Answer"
+            value={userAnswer}
+            onChange={(e) => setUserAnswer(e.target.value)}
+            className={validAnswer === null ? defaultStyle : validAnswer ? correctStyle : incorrectStyle}
+            
+          />
+        </label>
+        <input
+          className="text-lg mx px-6 py-2 rounded-full bg-slate-200 hover:bg-slate-300 bg-clip-padding"
+          type="submit"
+          value="Submit"
+          onClick={onCheckAnswer}
+        />
+      </form>
+      {validAnswer !== null && (
+        <p className="text-xl">
+          {validAnswer ? 'Correct!' : 'Incorrect. Try again!'}
+        </p>
+      )}
 
           <div className="flex flex-row justify-items-center gap-x-5 justify-center py-6">
             <button className='text-lg mx
