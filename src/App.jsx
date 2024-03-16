@@ -26,7 +26,7 @@ function App() {
 
     {
       question: 'What is the last name of the Simpsons\' friendly neighbor?',
-      answer: 'Ned Flanders'
+      answer: 'Flanders'
     },
 
     {
